@@ -1,0 +1,48 @@
+# ============================================================
+# config — ghostty/sanny
+# ============================================================
+
+# --- Typography ---
+font-family= JetBrainsMono Nerd Font
+font-size = 11
+
+# --- Window --- 
+confirm-close-surface = false
+
+# --- Colors (Kessoku Band Palette) ---
+# Note: Full palette replacement scheduled for Phase 3 (Monogatari)
+background = #000000
+foreground = #F7AABC
+selection-background = #F7AABC
+selection-foreground = #000000
+cursor-color = #F7AABC
+
+# Blacks
+palette = 0=#1a1a1a
+palette = 8=#2d2d2d
+
+# Kita - Reds
+palette = 1=#c75255
+palette = 9=#E94B67
+
+# Ryo - Blues
+palette = 4=#516aa1
+palette = 12=#7EB8D4
+
+# Nijika - Yellows
+palette = 3=#e9d985
+palette = 11=#F0C060
+
+# Bocchi - Pinks
+palette = 5=#f59bb1
+palette = 13=#E87FA0
+
+# Greens/Cyans
+palette = 2=#89B4D4
+palette = 10=#A8C8E8
+palette = 6=#90C8D8
+palette = 14=#B0DCE8
+
+# Whites
+palette = 7=#E8D8CC
+palette = 15=#F5EDE8
