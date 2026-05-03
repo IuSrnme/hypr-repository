@@ -1,0 +1,81 @@
+// ============================================================
+// waybar/config.jsonc — sanny
+// ============================================================
+{
+    // --- Bar Position & Size ---
+    "layer": "top",          // Render above windows
+    "position": "top",       // Bar at top of screen
+    "height": 32,            // Bar height in pixels
+    "spacing": 4,            // Space between modules
+
+    // --- Module Layout ---
+    "modules-left":   ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right":  ["mpris", "pulseaudio", "network", "cpu", "memory", "tray"],
+
+    // --- Workspaces ---
+    "hyprland/workspaces": {
+        "format": "{id}",              // Show workspace number only
+        "on-click": "activate",        // Click to switch workspace
+        "sort-by-number": true         // Always in numerical order
+    },
+
+    // --- Clock ---
+    "clock": {
+        "format": "{:%H:%M}",          // 24h time
+        "format-alt": "{:%Y-%m-%d}",   // Click to toggle date
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>"  // Calendar on hover
+    },
+
+    // --- Media Player (playerctl) ---
+    "mpris": {
+        "format": "{player_icon} {title} — {artist}",
+        "format-paused": "{status_icon} {title} — {artist}",
+        "player-icons": {
+            "default":    "▶",
+            "rhythmbox":  "♫",
+            "firefox":    "󰖟"           // Nerd font Firefox icon
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "max-length": 40               // Truncate long titles
+    },
+
+    // --- Volume ---
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]  // Low/mid/high volume icons
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",  // Click to mute
+        "scroll-step": 5               // Scroll to change volume
+    },
+
+    // --- Network ---
+    "network": {
+        "format-ethernet": "󰈀 {bandwidthDownBytes}",  // Wired connection
+        "format-disconnected": "󰖪 disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"         // IP on hover
+    },
+
+    // --- CPU ---
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 2,                 // Update every 2 seconds
+        "tooltip": false
+    },
+
+    // --- RAM ---
+    "memory": {
+        "format": "󰍛 {used:0.1f}G",   // Show used RAM in GB
+        "interval": 2,
+        "tooltip": false
+    },
+
+    // --- System Tray ---
+    "tray": {
+        "spacing": 8                   // Space between tray icons
+    }
+}

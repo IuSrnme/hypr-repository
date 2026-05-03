@@ -1,0 +1,69 @@
+/* ============================================================
+   waybar/style.css — sanny
+   Note: Full Monogatari restyle scheduled for Phase 3
+   ============================================================ */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;                  /* Zero rounding — Monogatari direction */
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #F7AABC;                    /* Bocchi pink placeholder */
+    border-bottom: 2px solid #E94B67; /* Warning red accent */
+}
+
+/* --- Modules --- */
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0 8px;
+}
+
+/* --- Workspaces --- */
+#workspaces button {
+    padding: 0 8px;
+    color: #2d2d2d;                    /* Inactive workspace — dark */
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #E94B67;                    /* Active workspace — warning red */
+}
+
+#workspaces button:hover {
+    color: #F7AABC;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* --- Clock --- */
+#clock {
+    color: #F7AABC;
+    padding: 0 12px;
+}
+
+/* --- Right modules --- */
+#mpris,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#tray {
+    padding: 0 8px;
+    color: #F7AABC;
+}
+
+/* --- Muted state --- */
+#pulseaudio.muted {
+    color: #2d2d2d;
+}
+
+/* --- Disconnected network --- */
+#network.disconnected {
+    color: #E94B67;
+}
