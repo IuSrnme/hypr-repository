@@ -1,0 +1,2 @@
+# hyper-repository
+For hyprland
